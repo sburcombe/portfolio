@@ -1,0 +1,12 @@
+.skills-container {
+    width: 20%;
+    display: inline-block;
+    margin-right: 4%;
+}
+.devicon-skills {
+    width: 100%;
+}
+.invertedSkill {
+    background: white;
+    border-radius: 50%;
+}
