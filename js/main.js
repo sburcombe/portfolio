@@ -5,7 +5,7 @@ jQuery(document).on('ready', function () {
     jQuery(window).on('scroll', function () {
         animateElement();
     });
-    
+
     //Fix for Skills Fill
     skillsFill();
     //Fix z-index
@@ -14,7 +14,7 @@ jQuery(document).on('ready', function () {
     memberContentLoadOnClick();
     //Portfolio Item Load
     portfolioItemContentLoadOnClick();
-    //PrettyPhoto initial    
+    //PrettyPhoto initial
     setPrettyPhoto();
 
 
@@ -283,7 +283,7 @@ function loadMemberContent(memberID) {
             setTimeout(function () {
                 jQuery("#mcw-" + memberID).imagesLoaded(function () {
                     imageSliderSettings();
-                    jQuery(".site-content").fitVids(); //Fit Video                
+                    jQuery(".site-content").fitVids(); //Fit Video
                     jQuery('.member-holder').addClass('hide');
                     setTimeout(function () {
                         jQuery("#mcw-" + memberID).addClass('show');
@@ -329,6 +329,7 @@ var portfolioItemContentLoadOnClick = function () {
                 }, 300);
             }, 500);
         } else {
+
             loadPortfolioItemContent(portfolioItemID);
         }
     });
@@ -425,7 +426,7 @@ var SendMail = function () {
         var params = {
             'action': 'SendMessage',
             'name': jQuery('#name').val(),
-            'email': jQuery('#contact-email').val(),            
+            'email': jQuery('#contact-email').val(),
             'subject': jQuery('#subject').val(),
             'message': jQuery('#message').val()
         };

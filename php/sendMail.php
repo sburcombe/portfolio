@@ -14,7 +14,7 @@ if (isset($_POST["action"])) {
                 if (isset($_POST["email"]) && !empty($_POST["email"])) {
 
                     $message = $_POST["message"];
-                    $message .= "<br/><br/>";					
+                    $message .= "<br/><br/>";
 
                     $response = (SendEmail($message, $_POST["subject"], $_POST["email"], $email)) ? 'Message Sent' : "Sending Message Failed";
                 } else {
@@ -47,6 +47,16 @@ function SendEmail($message, $subject, $from, $to) {
         $isSent = true;
     }
     return $isSent;
+}
+if (!function_exists('handleCors')) {
+    function handleCors()
+    {
+        header("Access-Control-Allow-Origin: *");
+        if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+            header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
+            exit();
+        }
+    }
 }
 
 ?>
