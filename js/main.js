@@ -13,7 +13,7 @@ jQuery(document).on('ready', function () {
     //Member Content Load
     memberContentLoadOnClick();
     //Portfolio Item Load
-    portfolioItemContentLoadOnClick();
+    //portfolioItemContentLoadOnClick();
     //PrettyPhoto initial
     setPrettyPhoto();
 
